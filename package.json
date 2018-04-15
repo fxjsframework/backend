@@ -5,7 +5,10 @@
   "main": "bin/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node bin/server.js"
+    "start:server": "node bin/server.js",
+    "start:static": "node bin/static-server.js",
+    "dev:serve": "concurrently --kill-others \"npm run start:server\" \"npm run start:static\"",
+    "start": "npm run dev:serve"
   },
   "repository": {
     "type": "git",
@@ -29,7 +32,9 @@
   "dependencies": {
     "cluster": "^0.7.7",
     "compression": "^1.7.2",
+    "concurrently": "^3.5.1",
     "express": "^4.16.3",
+    "express-minify-html": "^0.12.0",
     "mysql2": "^1.5.3",
     "pm2": "^2.10.2",
     "sequelize": "^4.37.6"

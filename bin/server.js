@@ -25,15 +25,17 @@ const sequelize = new Sequelize(config.database.name, config.database.username, 
 })
 
 /**
- * Bootstrap Request Object
- */
-http_app.use(compress())
-
-/**
  * Bootstrap Functions
  */
 function isProduction() {
     return config.environment === "PRODUCTION"
+}
+
+/**
+ * Bootstrap Request Object
+ */
+if(isProduction()) {
+    http_app.use(compress())
 }
 
 /**

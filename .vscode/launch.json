@@ -1,0 +1,41 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open Chrome to API Server",
+            "url": "http://localhost:8000",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open Chrome to Static Server",
+            "url": "http://localhost:8222",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "chrome",
+            "request": "attach",
+            "name": "Attach to Chrome",
+            "port": 9222,
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Fx.js Server",
+            "program": "${workspaceFolder}/bin/server.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Fx.js Gateway Server (Static)",
+            "program": "${workspaceFolder}/bin/static-server.js"
+        }
+    ]
+}
