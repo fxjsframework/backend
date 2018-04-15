@@ -11,6 +11,7 @@ const cluster   = require('cluster')
  * Bootstrap Application and Configuration
  */
 const http_app   = express()
+const config     = require(path.join(__dirname, '../', 'config/', 'application.config.json'))
 
 /**
  * Bootstrap Functions
