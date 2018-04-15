@@ -1,0 +1,40 @@
+{
+    "environments": {
+        "PRODUCTION": {
+            "version_code": "0.0.1",
+            "domain": "fxjs.com"
+        },
+        "DEVELOPMENT": {
+            "version_code": "0.0.1",
+            "domain": "dev.fxjs.com"
+        },
+        "STAGING": {
+            "version_code": "0.0.1",
+            "domain": "staging.fxjs.com"
+        },
+        "BETA": {
+            "version_code": "0.0.1",
+            "domain": "beta.fxjs.com"
+        }
+    },
+    "environment": "PRODUCTION",
+    "database": {
+        "dialect": "mysql",
+        "name": "fxjs",
+        "hostname": "localhost",
+        "username": "root",
+        "password": "",
+        "operatorsAliases": false
+    },
+    "settings": {
+        "site": {
+            "title": "Fxjs | Modern Backend Framework"
+        },
+        "languages": {
+            "en-US": {
+                "string": "English",
+                "file": "${workspaceRoot}/config/languages/${lang_shortcode}/i18n.json"
+            }
+        }
+    }
+}

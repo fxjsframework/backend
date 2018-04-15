@@ -1,0 +1,35 @@
+{
+  "name": "fxjs",
+  "version": "0.0.1",
+  "description": "A fast, modern, and approachable backend framework for modern development needs",
+  "main": "bin/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bin/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fxjs/backend.git"
+  },
+  "keywords": [
+    "fxjs",
+    "full",
+    "stack",
+    "development",
+    "framework",
+    "http",
+    "framework"
+  ],
+  "author": "Michael Gervais <michael@invocie.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fxjs/backend/issues"
+  },
+  "homepage": "https://github.com/fxjs/backend#readme",
+  "dependencies": {
+    "cluster": "^0.7.7",
+    "express": "^4.16.3",
+    "mysql2": "^1.5.3",
+    "sequelize": "^4.37.6"
+  }
+}
