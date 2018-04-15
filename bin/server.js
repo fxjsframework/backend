@@ -1,6 +1,7 @@
 /**
  * Import Required Libraries
  */
+const compress  = require('compression')
 const express   = require('express')
 const path      = require('path')
 const cluster   = require('cluster')
@@ -22,6 +23,11 @@ const sequelize = new Sequelize(config.database.name, config.database.username, 
     },
     operatorsAliases: config.database.operatorsAliases
 })
+
+/**
+ * Bootstrap Request Object
+ */
+http_app.use(compress())
 
 /**
  * Bootstrap Functions
