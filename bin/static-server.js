@@ -37,6 +37,7 @@ if(isProduction()) {
             minifyJS: true
         }
     }))
+    http_app.set('view cache', true)
 }
 
 http_app.use(

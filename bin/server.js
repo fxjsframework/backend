@@ -16,10 +16,10 @@ const sequelize = new Sequelize(config.database.name, config.database.username, 
     host: config.database.hostname,
     dialect: config.database.dialect,
     pool: {
-        max: 15,
-        min: 0,
-        acquire: 30000,
-        idle: 10000
+        max: config.database.pool.max,
+        min: config.database.pool.min,
+        acquire: config.database.pool.acquire,
+        idle: config.database.pool.idle
     },
     operatorsAliases: config.database.operatorsAliases
 })
