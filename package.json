@@ -30,13 +30,18 @@
   },
   "homepage": "https://github.com/fxjsframework/backend#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "cluster": "^0.7.7",
     "compression": "^1.7.2",
     "concurrently": "^3.5.1",
     "express": "^4.16.3",
     "express-minify-html": "^0.12.0",
     "mysql2": "^1.5.3",
+    "node-uuid": "^1.4.8",
+    "nodemailer": "^4.6.4",
     "pm2": "^2.10.2",
-    "sequelize": "^4.37.6"
+    "sequelize": "^4.37.6",
+    "winston": "^2.4.1",
+    "winston-daily-rotate-file": "^3.0.2"
   }
 }

@@ -5,6 +5,7 @@ const compress  = require('compression')
 const express   = require('express')
 const path      = require('path')
 const cluster   = require('cluster')
+const uuid      = require('node-uuid')
 
 /**
  * Bootstrap Application and Configuration
@@ -37,6 +38,16 @@ function isProduction() {
 if(isProduction()) {
     http_app.use(compress())
 }
+http_app.use(function(request, response, next) {
+    request.uuid = uuid.v4()
+    var ip = request.headers['x-forwarded-for'] || request.connection.remoteAddress || request.socket.remoteAddress || ( request.connection.socket ? request.connection.socket.remoteAddress : null);
+    require('../logger')(
+        `${request.uuid} Request: ${request.originalUrl}`
+    )
+    require('../logger')(
+        `${request.uuid} Originating Address: ${ip}`
+    )
+})
 
 /**
  * Bootstrap our backend application

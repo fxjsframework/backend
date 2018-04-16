@@ -1,0 +1,12 @@
+{
+    "environments": [
+        {
+            "subdomain": "api",
+            "redirect_port": 8000
+        },
+        {
+            "subdomain": "static",
+            "redirect_port": 8222
+        }
+    ]
+}
